@@ -1,0 +1,90 @@
+﻿@model IEnumerable<Application.DTOs.Usuario.UsuarioGet>
+@{
+
+    ViewData["Title"] = "Home";
+    var Id = ViewData["Id"];
+    var nome = ViewData["Nome"];
+    var Img = ViewData["Img"];
+    var DataAlteracao = ViewData["DataAlteracao"];
+}
+
+<section class="home ">
+    <nav class="nav-header">
+        <header class="header">
+            <div class="profile-main">
+                <img src="@Img" alt="">
+
+                <div class="profile-text">
+                    <h3 key=@Id id="usuarioLogado">@nome</h3>
+                    <p>Online</p>
+                </div>
+
+                <div class="profile-status"></div>
+            </div>
+        </header>
+           
+        <div class="nav-tittle">
+            <input id="textPesquisar" type="text" placeholder="Pesquisar..." />
+            <button id="pesquisar">
+                <img src="~/img/icons8-pesquisar-32.png" alt="..." />
+            </button>
+        </div>
+
+        <section class="nav-main" id="userBuscados">
+            @foreach (var item in Model)
+            {
+                if(item.Nome != (string) nome!)
+                {
+                    <div key=@Html.DisplayFor(Model => item.Id) class ="profile-main">
+                        <img src="@Html.DisplayFor(Model => item.Img)" alt="">
+
+                        <div class="profile-text">
+                            <h3>@Html.DisplayFor(Model => item.Nome)</h3>
+                            <p>Visto em @Html.DisplayFor(Model => item.DataAlteracao)</p>
+                        </div>
+                        @if(item.Ativo == true)
+                        {
+                            <div class="profile-status"></div>
+                        }else
+                        {
+                            <div class="profile-status inativo"></div>
+                        }
+                    </div>
+                }
+            }
+        </section>
+
+        <footer class="nav-footer">
+            <div class="div-logout">
+                <button id="encerrar" onclick="location.href='@Url.Action("Logout", "Home",new {Id = ViewData["Id"]})'" class="logout" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Encerra a sessão">
+                        Encerrar
+                </button>
+            </div>
+
+        </footer>
+    </nav>
+
+    <div class="context">
+        
+        <header id="header" class="header message">
+            
+        </header>
+
+        <article>
+            <div class="chat" id="chat">
+                
+            </div>
+            
+            <div class="chat-send">
+                <input type="text" id="mensageSend" placeholder="Digite sua mensagem...">
+                <button type="button" class="btn-escrever" id="buttonSend" disabled>Enviar</button>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/chat.js"></script>
+<script src="~/js/home.js"></script>
+

@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Flavio Martins Jr">
+    <meta name="description" content="Resolvendo desafio tecnico requisitado">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="sistemas, carinho, mks">
+    <meta name="copyright" content="© Flavin" />
+    <meta http-equiv="content-language" content="pt-br, en-US, fr" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <title>@ViewData["Title"] - Chat</title>
+    <link rel="icon" href="~/img/batepapo.png" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebUI.styles.css" asp-append-version="true" />
+</head>
+<body>
+ 
+    <main role="main">
+        @RenderBody()
+       
+    </main>
+
+    <footer class="footer footer-main">
+        <div class="footer-text">
+            <a>&copy; 2024 - Flavio Martins de Sousa Junior </a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "Ig9OXF0U5MRv3Pv4pHubHSbTYilzvQpjRfTItOuZPxSQEpollOo1HiscwwETvkStGxr3BW67q+ICYbUAXZNnHA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Flavio Martins Jr\\Source\\repos\\Source\\ChatUsingSocket\\Application\\Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Flavio Martins Jr\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
+    "C:\\Users\\Flavio Martins Jr\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Flavio Martins Jr\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\Flavio Martins Jr\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\Flavio Martins Jr\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

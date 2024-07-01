@@ -1,0 +1,30 @@
+﻿@model Application.DTOs.Usuario.UsuarioPost
+@{
+    ViewData["Title"] = "Login";
+}
+
+<section class="login">
+     <form class="w-1" asp-controller="login" asp-action="Logar">
+
+        <h1>Login - Chat</h1>
+        <div>
+            <p>Aplicação de chat usando WebSockets/Asp.Net</p>
+        </div>
+
+        <div class="input-main">
+            <label for="nome">Nome</label>
+            <input type="text" asp-for="Nome" id="Nome" autocomplete="off">
+        </div>
+
+
+        <div class="input-main mt-3">
+            <label for="senha">Senha</label>
+            <input type="password" asp-for="Senha" id="Senha" autocomplete="off">
+        </div>
+
+        <input type="submit" class="input-button mt-3" value="Entra">
+
+    </form> 
+
+</section>
+
